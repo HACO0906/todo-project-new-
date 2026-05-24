@@ -17,8 +17,10 @@
 -同步資料表
  - python manage.py migrate
  - python manage.py makemigrations
+
  -建立管理員
   - python manage.py createsuperuser
 
--新增功能
- -python manage.py startapp users
+
+ -新增app
+  - python manage.py startapp users
