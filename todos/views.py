@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Todo
+from .forms import TodoForm
 
 
 # Create your views here.
@@ -19,3 +20,7 @@ def todo_delete(request, id):
         print("無此ID")
 
     return redirect("todo-list")
+
+
+def todo_create(request):
+    return render(request, "todos/create.html", {"form": TodoForm()})
